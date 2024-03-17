@@ -1,35 +1,18 @@
-# Frontend - React
+# Download or Clone the Repository:
 
-This project fetches data from a provided API and displays it on a web page.
+This repository contains both backend and frontend projects.
 
-### API:
-- **Endpoint:** http://universities.hipolabs.com/search?country={country_name}
+## Backend:
+1. Open the project in Eclipse or IntelliJ IDE.
+2. Run the application.
+3. You can call the APIs using Postman collections attached at `backend\src\main\resources\University Information.postman_collection`.
 
-### How it Works:
-After running the project, follow these instructions:
+For more details, refer to the README.md file inside the backend project.
 
-1. **Input Country Name:**
-   - Take the country name as input and pass it to the API.
+## Frontend:
+1. Open the project in Visual Studio Code.
+2. Open the terminal and run the command `npm start`. This will start the React application.
 
-2. **Display Data:**
-   - Display the fetched data in the format provided below.
+For more details, refer to the README.md file inside the frontend project.
 
-3. **University Details:**
-   - Click on the university name to open the details of that university in a new page.
-
-4. **Toggle Functionality:**
-   - Click on the "+" sign to toggle. It will expand and collapse on clicks.
-
-### List of Universities in Pakistan:
-+ **University Name:** Information Technology University, Lahore
-  - **Domains:** itu.edu.pk
-  - **Country Code:** PK
-  - **Web Sites:** [https://itu.edu.pk/](https://itu.edu.pk/)
-  - **State / Province:** Punjab
-  - **Country:** Pakistan
-
-+ **Abasyn University Peshawar**
-  
-+ **Allama Iqbal Open University**
-
-This structure ensures clarity and readability for users interacting with your frontend React application.
+This structure should provide clear instructions for setting up and running both the backend and frontend projects.
