@@ -20,6 +20,8 @@ This project includes the following functionalities:
   - After running the application, first, verify and use the exact `testdb` file location in `localhost:(your port)/h2-console`. For example:
     ```
     jdbc:h2:~/downloads/uniInfo/data/testdb
+    after downloading the repository
+    h2 path be like : downloads/cunis-main/cunis-main/backend/data/testdb
     ```
   - Ensure the correct path is used for accessing the `testdb` file in the H2 console.
 
