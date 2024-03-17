@@ -23,4 +23,5 @@ This project includes the following functionalities:
     ```
   - Ensure the correct path is used for accessing the `testdb` file in the H2 console.
 
-![image](https://github.com/iamjunaydgul/cunis/assets/52971436/fc7491dd-402d-489a-92d9-3bb7830e17e8)
+![image](https://github.com/iamjunaydgul/cunis/assets/52971436/0a855246-7591-4ec1-a65c-9abc00c36e6a)
+
