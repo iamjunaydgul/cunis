@@ -5,6 +5,7 @@ import com.project.uniInfo.repository.UniversityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,6 +18,16 @@ public class UniversityService {
         return universityRepository.findByCountry(country);
     }
 
+    public List<University> getByCountryAndState(String country, String stateProvince) {
+        List<University> universities= universityRepository.findByCountry(country);
+        List<University> countryProvinceList= new ArrayList<>();
+        universities.forEach(it-> {
+            if(it.getCountry().equals(country) && it.getStateProvince().equals(stateProvince)){
+                countryProvinceList.add(it);
+            }
+        });
+        return countryProvinceList;
+    }
     public void saveUniversity(University university) {
         universityRepository.save(university);
     }
@@ -30,12 +41,24 @@ public class UniversityService {
         if (optionalUniversity.isPresent()) {
             University university = optionalUniversity.get();
             if (university.getCountry().equalsIgnoreCase(country)) {
-                university.setName(updatedUniversity.getName());
-                university.setDomains(updatedUniversity.getDomains());
-                university.setAlpha_two_code(updatedUniversity.getAlpha_two_code());
-                university.setWeb_pages(updatedUniversity.getWeb_pages());
-                university.setStateProvince(updatedUniversity.getStateProvince());
-                university.setCountry(updatedUniversity.getCountry());
+                if(updatedUniversity.getName()!= null){
+                    university.setName(updatedUniversity.getName());
+                }
+                if(updatedUniversity.getDomains()!= null){
+                    university.setDomains(updatedUniversity.getDomains());
+                }
+                if(updatedUniversity.getAlpha_two_code()!= null){
+                    university.setAlpha_two_code(updatedUniversity.getAlpha_two_code());
+                }
+                if(updatedUniversity.getWeb_pages()!= null){
+                    university.setWeb_pages(updatedUniversity.getWeb_pages());
+                }
+                if(updatedUniversity.getStateProvince()!= null) {
+                    university.setStateProvince(updatedUniversity.getStateProvince());
+                }
+                if(updatedUniversity.getCountry()!= null) {
+                    university.setCountry(updatedUniversity.getCountry());
+                }
                 return universityRepository.save(university);
             } else {
                 throw new IllegalArgumentException("University not found in the specified country");

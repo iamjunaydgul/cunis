@@ -21,6 +21,11 @@ public class UniversityController {
         return universityService.getByCountry(country);
     }
 
+    @GetMapping("/getByCountryAndState")
+    public List<University> getByCountryAndState(@RequestParam String country, String stateProvince) {
+        return universityService.getByCountryAndState(country, stateProvince);
+    }
+
     @PutMapping
     public University updateUniversity(
             @RequestParam String country,
